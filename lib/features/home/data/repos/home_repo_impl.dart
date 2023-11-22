@@ -2,6 +2,7 @@ import 'package:book_app/core/errors/failures.dart';
 import 'package:book_app/core/utils/api_service.dart';
 import 'package:book_app/features/home/data/models/book_model/book_model.dart';
 import 'package:book_app/features/home/data/repos/home_repo.dart';
+// ignore: depend_on_referenced_packages
 import 'package:dartz/dartz.dart';
 
 class HomeRepoImpl implements HomeRepo {
@@ -20,7 +21,12 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(books);
     } catch (e) {
-      return left(ServerFailure());
+      // if (e is DioException) {
+      //   return left(ServerFailure.fromDioException(e));
+      // } else {
+      //   return left(ServerFailure(e.toString()));
+      // }
+       return left(ServerFailure(e.toString()));
     }
   }
 
