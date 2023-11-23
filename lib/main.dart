@@ -3,7 +3,7 @@ import 'package:book_app/core/utils/app_routers.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const BooklyApp());
@@ -24,4 +24,3 @@ class BooklyApp extends StatelessWidget {
     );
   }
 }
-
