@@ -4,7 +4,6 @@ import 'package:book_app/features/home/presentation/views/widgets/booking_rate.d
 import 'package:book_app/features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
-
 import '../../../../../core/utils/styles.dart';
 // ignore: depend_on_referenced_packages
 import 'package:go_router/go_router.dart';
@@ -19,7 +18,10 @@ class BookListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouters.kBookDetailsView);
+        GoRouter.of(context).push(
+          AppRouters.kBookDetailsView,
+          extra: bookModel,
+        );
       },
       child: SizedBox(
         height: 125,
