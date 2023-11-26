@@ -16,6 +16,7 @@ class NewestListView extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: ListView.builder(
+              shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 padding: EdgeInsets.zero,
                 itemCount: 10,

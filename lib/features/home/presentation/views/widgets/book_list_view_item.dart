@@ -4,7 +4,7 @@ import 'package:book_app/features/home/presentation/views/widgets/booking_rate.d
 import 'package:book_app/features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/assets.dart';
+
 import '../../../../../core/utils/styles.dart';
 // ignore: depend_on_referenced_packages
 import 'package:go_router/go_router.dart';

@@ -1,5 +1,4 @@
 import 'package:book_app/core/utils/styles.dart';
-import 'package:book_app/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
