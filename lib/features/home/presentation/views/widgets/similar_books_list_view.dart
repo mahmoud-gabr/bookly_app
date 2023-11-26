@@ -16,14 +16,15 @@ class SimilarBooksListView extends StatelessWidget {
         builder: (context, state) {
           if (state is SimilarBooksSucsess) {
             return ListView.builder(
+                itemCount: state.books.length,
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 5),
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: CustomBookImage(
                       imageUrl:
-                          'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
+                          state.books[index].volumeInfo.imageLinks.thumbnail,
                     ),
                   );
                 });
